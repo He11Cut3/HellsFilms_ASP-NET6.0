@@ -1,0 +1,43 @@
+﻿@model IEnumerable<HellsFilmsMovie>
+
+<div class="hero common-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hero-ct">
+					<h1>Главная - Фильмы</h1>
+					<ul class="breadcumb">
+						<li class="active"><a href="#">Главная</a></li>
+						<li> <span class="ion-ios-arrow-right"></span> Фильмы</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="topbar-filter fw">
+					<p>Найдено <span>@ViewBag.RowCount</span> фильмов</p>
+				</div>
+				<div class="flex-wrap-movielist mv-grid-fw">
+				@foreach(var movie in Model)
+				{
+						<div class="movie-item-style-2 movie-item-style-1">
+							<img src="@movie.HellsFilmsMoviePhoto" alt="">
+							<div class="hvr-inner">
+								<a asp-controller="MovieList" asp-action="Details" asp-route-id="@movie.HellsFilmsMovieID"> Смотреть <i class="ion-android-arrow-dropright"></i> </a>
+							</div>
+							<div class="mv-item-infor">
+								<h6><a href="#">@movie.HellsFilmsMovieName</a></h6>
+								<p class="rate"><i class="ion-android-star"></i><span>@movie.HellsFilmsMovieRating</span> /10</p>
+							</div>
+						</div>
+				}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

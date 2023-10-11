@@ -1,0 +1,28 @@
+﻿@model IEnumerable<HellsFilmsSerial>
+
+<div class="tab-content">
+	<div class="tab1">
+		<div class="row">
+			<div class="slick-multiItem">
+				@foreach (var movie in Model.Take(12))
+				{
+					<div class="slide-it">
+
+						<div class="movie-item">
+							<div class="mv-img">
+								<a><img width="185" height="284" src="@movie.HellsFilmsSerialPhoto" alt="Изображение"></a>
+							</div>
+							<div class="hvr-inner">
+								<a asp-controller="Serial" asp-action="Details" asp-route-id="@movie.HellsFilmsSerialID"> Смотреть <i class="ion-android-arrow-dropright"></i> </a>
+							</div>
+							<div class="title-in">
+								<h6><a href="#">@movie.HellsFilmsSerialName</a></h6>
+								<p><i class="ion-android-star"></i><span>@movie.HellsFilmsSerialRating</span> /10</p>
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+</div>

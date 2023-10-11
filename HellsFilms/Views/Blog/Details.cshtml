@@ -1,0 +1,40 @@
+﻿@model HellsFilmsBlog
+
+<div class="hero common-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hero-ct">
+					<h1> Новость</h1>
+					<ul class="breadcumb">
+						<li class="active"><a href="#">Главная </a></li>
+						<li> <span class="ion-ios-arrow-right"></span> Новости</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- blog detail section-->
+<div class="page-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 col-sm-12 col-xs-12">
+				<div class="blog-detail-ct">
+					<h1>@Model.HellsFilmsBlogName</h1>
+					@if (Model.HellsFilmsBlogPhoto != null)
+					{
+						var base64 = Convert.ToBase64String(Model.HellsFilmsBlogPhoto);
+						var imgSrc = string.Format("data:image/png;base64,{0}", base64);
+						<img class="primary-img" src="@imgSrc" alt="">
+					}
+					<span class="time">@Model.HellsFilmsBlogDate</span>
+					<p>
+						@Html.Raw(Model.HellsFilmsBlogDescription)
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end of  blog detail section-->

@@ -1,0 +1,98 @@
+﻿@model List<HellsFilmsMovie>
+
+<div class="slider movie-items">
+	<div class="container">
+		<div class="row">
+			<div class="social-link">
+				<p>Автор: </p>
+				<a href="https://github.com/He11Cut3"><i class="ion-social-github"></i></a>
+			</div>
+			<div class="slick-multiItemSlider">
+				@foreach (var movie in Model.Take(12))
+				{
+					<div class="movie-item">
+						<div class="mv-img">
+							<a><img width="285" height="437" src="@movie.HellsFilmsMoviePhoto" alt="Изображение" ></a>
+						</div>
+						<div class="title-in">
+							<h6><a href="#">@movie.HellsFilmsMovieName</a></h6>
+							<p><i class="ion-android-star"></i><span>@movie.HellsFilmsMovieRating</span> /10</p>
+						</div>
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+</div>
+<div class="movie-items">
+	<div class="container">
+		<div class="row ipad-width">
+			<div class="col-md-8">
+				<div class="title-hd">
+					<h2>Популярные фильмы</h2>
+					<a asp-controller="MovieList" asp-action="Index" class="viewall">Полный список фильмов<i class="ion-ios-arrow-right"></i></a>
+				</div>
+				<div class="tabs">
+					<ul class="tab-links">
+						<li class="active"><a href="#tab1"></a>ㅤ</li>
+						<li><a href="#tab2"></a>ㅤ</li>
+						<li><a href="#tab3"></a>ㅤ</li>
+						<li><a href="#tab4"></a>ㅤ</li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab1">
+							<div class="row">
+								<div class="slick-multiItem">
+									@foreach (var movie in Model.Skip(12).Take(12))
+									{
+									<div class="slide-it">
+										
+											<div class="movie-item">
+												<div class="mv-img">
+													<a><img width="185" height="284" src="@movie.HellsFilmsMoviePhoto" alt="Изображение"></a>
+												</div>
+												<div class="hvr-inner">
+													<a asp-controller="MovieList" asp-action="Details" asp-route-id="@movie.HellsFilmsMovieID"> Смотреть <i class="ion-android-arrow-dropright"></i> </a>
+												</div>
+												<div class="title-in">
+													<h6><a href="#">@movie.HellsFilmsMovieName</a></h6>
+													<p><i class="ion-android-star"></i><span>@movie.HellsFilmsMovieRating</span> /10</p>
+												</div>
+											</div>
+									</div>
+									}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="title-hd">
+					<h2>Популярные сериалы</h2>
+					<a asp-controller="Serial" asp-action="Index" class="viewall">Полный список сериалов<i class="ion-ios-arrow-right"></i></a>
+				</div>
+				<div class="tabs">
+					<ul class="tab-links">
+						<li class="active"><a href="#tab1"></a>ㅤ</li>
+						<li><a href="#tab2"></a>ㅤ</li>
+						<li><a href="#tab3"></a>ㅤ</li>
+						<li><a href="#tab4"></a>ㅤ</li>
+					</ul>
+					<vc:serial />
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="sidebar">
+					<div class="ads">
+						<img src="images/uploads/ads1.png" alt="" width="336" height="296">
+					</div>
+					<div class="celebrities">
+						<h4 class="sb-title">Новости</h4>
+						<div class="celeb-item">
+							<vc:tag/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

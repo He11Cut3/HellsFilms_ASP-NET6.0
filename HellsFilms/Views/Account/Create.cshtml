@@ -1,0 +1,56 @@
+﻿@model HellsFilmsUser
+
+
+<div class="hero user-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hero-ct">
+					<h1>Регистрация</h1>
+					<ul class="breadcumb">
+						<li class="active"><a href="#">ㅤㅤㅤㅤㅤㅤㅤГлавная страница</a></li>
+						<li> <span class="ion-ios-arrow-right"></span>Регистрация</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single">
+	<div class="container">
+		<div class="row ipad-width">
+			<div class="col-md-9 col-sm-12 col-xs-12">
+				<div class="form-style-1 user-pro" action="#">
+					<form asp-action="Create">
+						<div asp-validation-summary="All" class="text-danger"></div>
+						<div class="form-group">
+							<label for="username">
+								Логин
+								<input asp-for="HellsFilmsUserLogin" class="form-control" />
+								<span asp-validation-for="HellsFilmsUserLogin" class="text-danger"></span>
+							</label>
+						</div>
+						<div class="form-group">
+							<label for="password">
+								Почта
+								<input asp-for="HellsFilmsUserEmail" class="form-control" />
+								<span asp-validation-for="HellsFilmsUserEmail" class="text-danger"></span>
+							</label>
+							
+						</div>
+						<div class="form-group">
+							<label for="password">
+								Пароль:
+								<input asp-for="HellsFilmsUserPassword" class="form-control" />
+								<span asp-validation-for="HellsFilmsUserPassword" class="text-danger"></span>
+							</label>
+						</div>
+						<div class="form-group">
+							<button class="btn btn-primary mt-2">Зарегистрироваться</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

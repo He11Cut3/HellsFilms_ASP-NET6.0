@@ -1,0 +1,53 @@
+﻿@model IEnumerable<HellsFilmsSerial>
+
+
+
+<div class="page-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+				</div>
+				<div class="movie-item-style-2 movie-item-style-1">
+					<div class="mv-item-infor">
+						<ul class="nav navbar-nav flex-child-menu menu-center">
+							<li class="dropdown first">
+								<a>ㅤㅤㅤㅤ</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="movie-item-style-2 movie-item-style-1">
+					<div class="mv-item-infor">
+						<ul class="nav navbar-nav flex-child-menu menu-center">
+							<li class="dropdown first">
+								<a asp-action="Create">Добавить сериал</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="flex-wrap-movielist mv-grid-fw">
+
+					@foreach (var serial in Model)
+					{
+						<div class="movie-item-style-2 movie-item-style-1">
+							<img src="@serial.HellsFilmsSerialPhoto" alt="">
+							<div class="mv-item-infor">
+								<h6><a href="#">@serial.HellsFilmsSerialName</a></h6>
+								<p class="rate"><i class="ion-android-star"></i><span>@serial.HellsFilmsSerialRating</span> /10</p>
+								<ul class="nav navbar-nav flex-child-menu menu-left">
+									<li class="dropdown first">
+										<a asp-action="Edit" asp-route-id="@serial.HellsFilmsSerialID">Изменить</a>
+									</li>
+									<li class="dropdown first">
+										<a asp-action="Delete" asp-route-id="@serial.HellsFilmsSerialID" class="confirmDeletion">Удалить</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

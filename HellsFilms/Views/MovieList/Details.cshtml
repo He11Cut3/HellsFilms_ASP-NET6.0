@@ -1,0 +1,37 @@
+﻿@model HellsFilmsMovie
+
+
+<div class="hero mv-single-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1></h1>
+				<ul class="breadcumb">
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="page-single movie-single movie_single">
+	<div class="container">
+		<div class="row ipad-width2">
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<div >
+					<img src="@Model.HellsFilmsMoviePhoto" alt="">
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-12 col-xs-12">
+				<div class="movie-single-ct main-content">
+					<h1 class="bd-hd">@Model.HellsFilmsMovieName <span></span></h1>
+					<div class="movie-tabs">
+						<div class="tabs">
+							<div class="kinobox_player"></div>
+							<script src="https://kinobox.tv/kinobox.min.js"></script>
+							<script>new Kinobox('.kinobox_player', { search: { kinopoisk: '@Model.HellsFilmsMovieIDFilms' } }).init();</script>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

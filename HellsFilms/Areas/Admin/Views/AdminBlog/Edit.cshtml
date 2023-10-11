@@ -1,0 +1,76 @@
+﻿@model HellsFilmsBlog
+
+<div class="hero user-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="hero-ct">
+                    <h1>Изменение новости</h1>
+                    <ul class="breadcumb">
+                        <li class="active"><a href="#">Новость</a></li>
+                        <li> <span class="ion-ios-arrow-right"></span>Изменение</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-single">
+    <div class="container">
+        <div class="row ipad-width">
+            <div class="col-md-9 col-sm-12 col-xs-12">
+                <div class="form-style-1 user-pro">
+                    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="form-group">
+                            <label asp-for="HellsFilmsBlogName" class="control-label">Наименование</label>
+                            <input asp-for="HellsFilmsBlogName" class="form-control" />
+                            <span asp-validation-for="HellsFilmsBlogName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="HellsFilmsBlogDate" class="control-label">Дата (дд.мм.гггг)</label>
+                            <input asp-for="HellsFilmsBlogDate" class="form-control" />
+                            <span asp-validation-for="HellsFilmsBlogDate" class="text-danger"></span>
+                        </div>
+                        @if (Model != null)
+                        {
+                            <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.HellsFilmsBlogPhoto)" alt="Previous Image" />
+                        }
+                        <div class="form-group">
+                            <label asp-for="ImageUpload" class="control-label">Загрузите фотографию</label>
+                            <input type="file" id="files" asp-for="ImageUpload" />
+                            <span asp-validation-for="ImageUpload" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="HellsFilmsBlogDescription" class="control-label">Описание</label>
+                            <textarea asp-for="HellsFilmsBlogDescription" class="form-control"></textarea>
+                            <span asp-validation-for="HellsFilmsBlogDescription" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Тег</label>
+                            <select asp-for="HellsFilmsTagID" class="form-control" asp-items="ViewBag.Tag">
+                                <option value="0">Выберите категорию</option>
+                            </select>
+                            <span asp-validation-for="HellsFilmsTagID" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary">Изменить</button>
+                        </div>
+                    </form>
+                </div>
+                <div>
+                    <a asp-action="Index">Вернуться обратно</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
+<script>
+
+    CKEDITOR.replace('HellsFilmsBlogDescription');
+</script>
