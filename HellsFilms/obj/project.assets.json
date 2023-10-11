@@ -10236,11 +10236,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kek13\\OneDrive\\Рабочий стол\\HellsFilms\\HellsFilms\\HellsFilms.csproj",
+      "projectUniqueName": "C:\\Users\\kek13\\OneDrive\\Рабочий стол\\01\\Git\\HellsFilms\\HellsFilms_ASP-NET6.0\\HellsFilms\\HellsFilms.csproj",
       "projectName": "HellsFilms",
-      "projectPath": "C:\\Users\\kek13\\OneDrive\\Рабочий стол\\HellsFilms\\HellsFilms\\HellsFilms.csproj",
+      "projectPath": "C:\\Users\\kek13\\OneDrive\\Рабочий стол\\01\\Git\\HellsFilms\\HellsFilms_ASP-NET6.0\\HellsFilms\\HellsFilms.csproj",
       "packagesPath": "C:\\Users\\kek13\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kek13\\OneDrive\\Рабочий стол\\HellsFilms\\HellsFilms\\obj\\",
+      "outputPath": "C:\\Users\\kek13\\OneDrive\\Рабочий стол\\01\\Git\\HellsFilms\\HellsFilms_ASP-NET6.0\\HellsFilms\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\WQ\\NuGetPackages"

@@ -12,10 +12,10 @@
 				{
 					<div class="movie-item">
 						<div class="mv-img">
-							<a><img width="285" height="437" src="@movie.HellsFilmsMoviePhoto" alt="Изображение" ></a>
+							<a asp-controller ="MovieList" asp-action="Details" asp-route-id="@movie.HellsFilmsMovieID"><img width="285" height="437" src="@movie.HellsFilmsMoviePhoto" alt="Изображение"></a>
 						</div>
 						<div class="title-in">
-							<h6><a href="#">@movie.HellsFilmsMovieName</a></h6>
+							<h6><a asp-controller="MovieList" asp-action="Details" asp-route-id="@movie.HellsFilmsMovieID">@movie.HellsFilmsMovieName</a></h6>
 							<p><i class="ion-android-star"></i><span>@movie.HellsFilmsMovieRating</span> /10</p>
 						</div>
 					</div>

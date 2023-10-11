@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HellsFilms")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6f8fbbceabff6c8088b26062057696d23ab8b05")]
 [assembly: System.Reflection.AssemblyProductAttribute("HellsFilms")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HellsFilms")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

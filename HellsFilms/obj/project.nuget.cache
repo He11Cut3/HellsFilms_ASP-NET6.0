@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4ImZlz8WoBjm8U1wdXUdfC1OBeU53wlWSukHLLplxT4jFdIiykPGlz6kS1hpwdTQkQXwK9RMZu2LiE9WUpe/qw==",
+  "dgSpecHash": "+0/vQp+pxYd6cN4B/Rv3C9yytJlYz0eULQhjFunnVdRI9SxkTtR+BomIIqEMuZrdFe03d4Wz0DQXK7QmAy0jIw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kek13\\OneDrive\\Рабочий стол\\HellsFilms\\HellsFilms\\HellsFilms.csproj",
+  "projectFilePath": "C:\\Users\\kek13\\OneDrive\\Рабочий стол\\01\\Git\\HellsFilms\\HellsFilms_ASP-NET6.0\\HellsFilms\\HellsFilms.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kek13\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\kek13\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
